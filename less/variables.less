@@ -12,3 +12,14 @@
 @shark: #212529;
 @eastern-blue: #17A2B8;
 @sandy-beach: #FFEBCD;
+
+// Parametric mixins
+.flex(@fd, @jc, @ai) {
+    display: flex;
+    flex-direction: @fd;
+    justify-content: @jc;
+    align-items: @ai;
+}
+
+// Variable break points
+@mobile: (max-width: 500px);
