@@ -1,6 +1,8 @@
 .home {
   @media @mobile {
     padding: 0% 5%;
+    .flex(column, center, center)
+
   }
   .top-section {
     border-bottom: 2px dashed @navigation-border;
@@ -31,11 +33,22 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+      
+      @media @mobile {
+        width:95%;
+      }
+
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 95%;
+        padding-right: 0%;
+        padding-left: 0%;
+      }
 
       img {
         border-radius: 10px;
@@ -47,6 +60,12 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      :first-child{
+        order: 3;
+       }
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -55,12 +74,22 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        padding-right: 0%;
+        padding-left: 0%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      width: 95%;
+      padding-right: 0%;
+    }
 
     img {
       border-radius: 10px;
