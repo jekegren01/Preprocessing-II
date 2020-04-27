@@ -3,14 +3,31 @@ header {
     border-bottom: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-around;
-    margin: 0 auto 30px;
+    margin: 0 auto 0px;
     width: 75%;
-    padding-top: 2%;
+    padding: 2% 0%;
     text-align: center;
+
+    @media @mobile {
+        width: 98%;
+        .flex(column, space-around, center);
+    }
 }
 
 nav {
     width: 50%;
     .flex(row, space-around, auto);
+
+    @media @mobile {
+        width: 95%;
+        .flex(row, space-around, space-around);
+    }
+
+    a {
+        text-decoration: none;
+        color: @font-color;
+        font-family: roboto;
+        font-size: 1.8rem;
+    }
 }
 

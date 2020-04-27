@@ -1,1 +1,18 @@
 // Mixins in here
+// Parametric mixins
+.flex(@fd, @jc, @ai) {
+    display: flex;
+    flex-direction: @fd;
+    justify-content: @jc;
+    align-items: @ai;
+}
+
+.button(@bcolor,@bfcolor,@height,@width) {
+    background-color: @bcolor;
+    border-radius: 10px;
+    color: @bfcolor;
+    height: @height;
+    width: @width;
+    .flex(row, center, center);
+    font-size: 1.4rem;
+}
